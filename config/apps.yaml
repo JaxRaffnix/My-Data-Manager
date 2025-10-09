@@ -1,0 +1,33 @@
+apps:
+  git:
+    dependencies:
+      - command: "git"
+      - source: git.git
+      - is_app: true
+    config:
+      user.name: "Alice"
+      user.email: "alice@example.com"
+      init.defaultBranch: "main"
+      credential.helper: "manager"
+      color.ui: "auto"
+      core.autocrlf: "true"
+      pull.rebase: "false"
+
+  office:
+    description: "Install Microsoft Office via Office Deployment Tool"
+    dependencies:
+      - command: "setup.exe"
+      - source: "Microsoft.OfficeDeploymentTool"
+      - is_app: true
+    config:
+      configXmlPath: "office_config.xml"
+
+  oh-my-posh:
+    description: "Setup Oh-My-Posh prompt, install font, configure editors, and update PowerShell profile"
+    dependencies:
+      - command: "oh-my-posh"
+      - source: "jandedobbeleer.oh-my-posh"
+    config:
+      fontName: "MesloLGS NF"
+      profilePath: "$PROFILE"
+      windowsTerminalSettings: "$env:LOCALAPPDATA\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json"
