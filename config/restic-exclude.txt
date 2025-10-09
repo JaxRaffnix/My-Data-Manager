@@ -1,0 +1,8 @@
+# Files
+*.ini
+
+# Folders
+DriveSyncFiles
+Google Fotos
+HKA EITB
+Temp

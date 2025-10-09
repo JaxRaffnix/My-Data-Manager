@@ -1,0 +1,10 @@
+# Excluded Thunderbird profile folders
+browser-extension-data
+cache2
+crashes
+ImapMail
+shader-cache
+startupCache
+storage
+minidumps
+crash-report
